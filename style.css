@@ -1,0 +1,120 @@
+html,
+body,
+div,
+img {
+  color: #ebebeb;
+  background-color: #c79d9d;
+  border: 0;
+  font-size: 100%;
+  font-family: "Times New Roman", Times, serif;
+  vertical-align: bottom;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.imagine {
+  position: relative;
+  object-fit: contain;
+  text-align: center;
+}
+
+.imagine p {
+  position: absolute;
+  width: 100%;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  visibility: hidden;
+  bottom: 0px;
+  left: 0px;
+  color: #ebebeb;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.imagine:hover > p {
+  visibility: visible;
+}
+
+.imagine img {
+  height: 100%;
+  width: 100%;
+}
+
+.divider {
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid #ebebeb;
+  background-color: rgb(43, 43, 43);
+}
+
+input {
+  width: 50%;
+  margin: 10px;
+  margin-bottom: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #c07777;
+  font-size: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 5px;
+  color: rgb(63, 11, 37);
+  background-color: #c07777;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* adaugam capacitate de reactie in timp ce umplem 100% din latimea containerelor*/
+/*@media este utilizat in interogarile media pentru a aplica stiluri diferite pentru diferite tipuri de dispozitive*/
+@media (min-width: 320px) {
+  .pages {
+    /*Specifica numarul coloanelor in care ar trebui pus continutul elementului*/
+    -webkit-column-count: 2;
+    /*Specifica spatiul dintre coloanele destinate continutului*/
+    -webkit-column-gap: 0px;
+    column-count: 2;
+    column-gap: 0px;
+  }
+  input {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .pages {
+    -webkit-column-count: 3;
+    -webkit-column-gap: 0px;
+    column-count: 3;
+    column-gap: 0px;
+  }
+  input {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pages {
+    -webkit-column-count: 4;
+    -webkit-column-gap: 0px;
+    column-count: 4;
+    column-gap: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pages {
+    -webkit-column-count: 5;
+    -webkit-column-gap: 0px;
+    column-count: 5;
+    column-gap: 0px;
+  }
+}
